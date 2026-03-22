@@ -59,13 +59,13 @@ const App = () => {
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="z-10 animate-hero">
                         <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-blue-100 text-blue-700 rounded-full">
-                            Next-Gen Automation
+                            AI Automation Agency
                         </span>
                         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8 tracking-tighter">
-                            Orchestrate Your <span className="text-[#1978e5]">Future</span> with AI
+                            We Build <span className="text-[#1978e5]">AI Employees</span> for Your Business
                         </h1>
                         <p className="text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed">
-                            Nis Automations Co. delivers hyper-efficient workflow architectures that scale with your ambition. Eliminate complexity, embrace precision.
+                            Stop losing leads after 5 PM. We build hyper-realistic Voice Agents, 24/7 WhatsApp Receptionists, and fully automated SaaS workflows that never sleep.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <button className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all flex items-center gap-2">
@@ -134,16 +134,16 @@ const App = () => {
 
                 <section className="py-24 max-w-7xl mx-auto px-6">
                     <div className="mb-16 reveal-on-scroll">
-                        <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Engineered for Excellence</h2>
-                        <p className="text-on-surface-variant max-w-2xl">Modular systems designed to solve the world's most complex automation challenges with surgical precision.</p>
+                        <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Our Core AI Services</h2>
+                        <p className="text-on-surface-variant max-w-2xl">We transform heavy manual operations into seamless, automated profits using the latest AI models available.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
                         <div className="md:col-span-2 md:row-span-2 bg-primary-container text-white p-10 rounded-3xl relative overflow-hidden flex flex-col justify-end group reveal-on-scroll">
                             <img alt="Close up of circuit board" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" />
                             <div className="relative z-10">
-                                <span className="material-symbols-outlined text-4xl mb-6">memory</span>
-                                <h3 className="text-3xl font-bold mb-4">Neural Infrastructure</h3>
-                                <p className="text-on-primary text-lg max-w-md">Our core engine uses adaptive neural networks to optimize data paths in real-time, reducing latency by up to 60%.</p>
+                                <span className="material-symbols-outlined text-4xl mb-6">record_voice_over</span>
+                                <h3 className="text-3xl font-bold mb-4">Inbound Voice AI Agents</h3>
+                                <p className="text-on-primary text-lg max-w-md">Hyper-realistic AI voices that answer your company phone 24/7, handle complex customer questions, and book meetings directly into Calendly.</p>
                             </div>
                         </div>
                         <div className="md:col-span-2 bg-white border border-outline-variant p-8 rounded-3xl flex flex-col justify-between hover:shadow-xl transition-shadow reveal-on-scroll delay-100">
@@ -165,12 +165,12 @@ const App = () => {
                             </div>
                         </div>
                         <div className="bg-surface-container-high p-8 rounded-3xl flex flex-col justify-between group cursor-pointer hover:bg-secondary transition-colors reveal-on-scroll delay-200">
-                            <span className="material-symbols-outlined text-[#1978e5] group-hover:text-white transition-colors">security</span>
-                            <h3 className="font-bold group-hover:text-white transition-colors">Quantum Security</h3>
+                            <span className="material-symbols-outlined text-[#1978e5] group-hover:text-white transition-colors mb-4">forum</span>
+                            <h3 className="font-bold group-hover:text-white transition-colors">WhatsApp AI Closers</h3>
                         </div>
-                        <div className="bg-[#1978e5] text-white p-8 rounded-3xl flex flex-col justify-between group cursor-pointer reveal-on-scroll delay-300">
-                            <span className="material-symbols-outlined text-white" style={{ fontVariationSettings: "'FILL' 1" }}>bolt</span>
-                            <h3 className="font-bold">Instant Scaling</h3>
+                        <div className="bg-[#1978e5] text-white p-8 rounded-3xl flex flex-col justify-between group cursor-pointer hover:bg-blue-700 transition-colors reveal-on-scroll delay-300">
+                            <span className="material-symbols-outlined text-white mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>lan</span>
+                            <h3 className="font-bold">Internal Company RAG</h3>
                         </div>
                     </div>
                 </section>
