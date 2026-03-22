@@ -34,9 +34,10 @@ const App = () => {
         <div className="bg-background text-on-background font-body antialiased min-h-screen">
             <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
                 <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-                    <div className="text-2xl font-bold tracking-tight text-blue-600 dark:text-blue-400">
-                        Nis Automations Co.
-                    </div>
+                    <a href="#" className="flex items-center gap-3">
+                        <img src="/logo.png" alt="Nis Automations Logo" className="h-8 md:h-10 object-contain drop-shadow-sm" />
+                        <span className="text-xl md:text-2xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight hidden sm:block">Nis Automations Co.</span>
+                    </a>
                     <div className="hidden md:flex items-center gap-8">
                         <a className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Solutions</a>
                         <a className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Process</a>
