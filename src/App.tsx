@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const App = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
     useEffect(() => {
         const observerOptions = {
             threshold: 0.15,
@@ -31,7 +33,22 @@ const App = () => {
     }, []);
 
     return (
-        <div className="bg-background text-on-background font-body antialiased min-h-screen">
+        <div className="bg-background text-on-background font-body antialiased min-h-screen relative">
+            {isModalOpen && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity">
+                    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 max-w-md w-full relative shadow-2xl transform transition-transform duration-300">
+                        <button onClick={() => setIsModalOpen(false)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <span className="material-symbols-outlined" translate="no">close</span>
+                        </button>
+                        <h2 className="text-2xl font-extrabold mb-2 text-gray-900 dark:text-white">Let's Build Your AI</h2>
+                        <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">Drop your work email below. Our automation architects will reach out within 2 hours to map your workflows.</p>
+                        <input type="email" placeholder="work@company.com" className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 mb-4 focus:ring-2 focus:ring-[#1978e5] outline-none text-gray-900 dark:text-white transition-colors" />
+                        <button onClick={() => { alert('Request received successfully! We will be in touch.'); setIsModalOpen(false); }} className="w-full bg-[#1978e5] text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20 hover:scale-[1.02]">
+                            Request Strategy Call
+                        </button>
+                    </div>
+                </div>
+            )}
             <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
                 <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
                     <a href="#" className="flex items-center gap-3 group">
@@ -49,7 +66,7 @@ const App = () => {
                         <a className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Testimonials</a>
                     </div>
                     <div className="flex items-center gap-4">
-                        <button className="bg-[#1978e5] text-white px-6 py-2.5 rounded-lg font-semibold hover:opacity-80 transition-opacity active:scale-95 duration-150">
+                        <button onClick={() => setIsModalOpen(true)} className="bg-[#1978e5] text-white px-6 py-2.5 rounded-lg font-semibold hover:opacity-80 transition-opacity active:scale-95 duration-150">
                             Get Started
                         </button>
                         <button className="md:hidden p-2">
@@ -73,10 +90,10 @@ const App = () => {
                             Stop losing leads after 5 PM. We build hyper-realistic Voice Agents, 24/7 WhatsApp Receptionists, and fully automated SaaS workflows that never sleep.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <button className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all flex items-center gap-2">
+                            <button onClick={() => setIsModalOpen(true)} className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all flex items-center gap-2">
                                 Launch Project <span className="material-symbols-outlined" translate="no">arrow_forward</span>
                             </button>
-                            <button className="glass-card text-on-background px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container transition-all">
+                            <button onClick={() => setIsModalOpen(true)} className="glass-card text-on-background px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container transition-all">
                                 View Demo
                             </button>
                         </div>
@@ -299,7 +316,7 @@ const App = () => {
                                 <li className="flex items-center gap-2 text-sm"><span className="material-symbols-outlined text-blue-400 text-lg">check_circle</span> Calendly Automation</li>
                                 <li className="flex items-center gap-2 text-sm"><span className="material-symbols-outlined text-blue-400 text-lg">check_circle</span> Handover to Human Agent</li>
                             </ul>
-                            <button className="w-full py-3 rounded-xl bg-[#1978e5] text-white font-bold hover:opacity-90 transition-opacity">Deploy Assistant</button>
+                            <button onClick={() => setIsModalOpen(true)} className="w-full py-3 rounded-xl bg-[#1978e5] text-white font-bold hover:opacity-90 transition-opacity">Deploy Assistant</button>
                         </div>
 
                         {/* Tier 3 - Enterprise RAG */}
@@ -331,10 +348,10 @@ const App = () => {
                             <h2 className="text-4xl md:text-6xl font-extrabold mb-8">Ready to automate the future?</h2>
                             <p className="text-xl text-on-primary/80 mb-12 max-w-2xl mx-auto">Join the ranks of high-performance enterprises leveraging Nis AI solutions.</p>
                             <div className="flex flex-col md:flex-row justify-center gap-6">
-                                <button className="bg-[#1978e5] text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform">
+                                <button onClick={() => setIsModalOpen(true)} className="bg-[#1978e5] text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform">
                                     Start Your Migration
                                 </button>
-                                <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/20 transition-colors">
+                                <button onClick={() => setIsModalOpen(true)} className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/20 transition-colors">
                                     Talk to an Expert
                                 </button>
                             </div>
