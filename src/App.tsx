@@ -53,7 +53,7 @@ const App = () => {
                             Get Started
                         </button>
                         <button className="md:hidden p-2">
-                            <span className="material-symbols-outlined">menu</span>
+                            <span className="material-symbols-outlined" translate="no">menu</span>
                         </button>
                     </div>
                 </nav>
@@ -74,7 +74,7 @@ const App = () => {
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <button className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all flex items-center gap-2">
-                                Launch Project <span className="material-symbols-outlined">arrow_forward</span>
+                                Launch Project <span className="material-symbols-outlined" translate="no">arrow_forward</span>
                             </button>
                             <button className="glass-card text-on-background px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container transition-all">
                                 View Demo
@@ -154,7 +154,7 @@ const App = () => {
                         <div className="md:col-span-2 bg-white border border-outline-variant p-8 rounded-3xl flex flex-col justify-between hover:shadow-xl transition-shadow reveal-on-scroll delay-100">
                             <div className="flex justify-between items-start">
                                 <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#1978e5] flex items-center justify-center">
-                                    <span className="material-symbols-outlined">sync_alt</span>
+                                    <span className="material-symbols-outlined" translate="no">sync_alt</span>
                                 </div>
                                 <span className="text-xs font-mono text-outline">SECURE LAYER V2.4</span>
                             </div>
