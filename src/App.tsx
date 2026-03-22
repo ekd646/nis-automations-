@@ -34,9 +34,13 @@ const App = () => {
         <div className="bg-background text-on-background font-body antialiased min-h-screen">
             <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
                 <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-                    <a href="#" className="flex items-center gap-3">
-                        <img src="/logo.png" alt="Nis Automations Logo" className="h-8 md:h-10 object-contain drop-shadow-sm" />
-                        <span className="text-xl md:text-2xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight hidden sm:block">Nis Automations Co.</span>
+                    <a href="#" className="flex items-center gap-3 group">
+                        <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:scale-105 transition-transform shadow-md rounded-[10px]">
+                            <rect width="40" height="40" rx="10" fill="#1b1b1b" />
+                            <path d="M12 28V12L28 28V12" stroke="#1978e5" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                            <circle cx="28" cy="12" r="3" fill="#1978e5" />
+                        </svg>
+                        <span className="text-xl md:text-2xl font-extrabold text-on-surface tracking-tight hidden sm:block">Nis Automations</span>
                     </a>
                     <div className="hidden md:flex items-center gap-8">
                         <a className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="#">Solutions</a>
