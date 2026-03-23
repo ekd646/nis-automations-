@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalMode, setModalMode] = useState<"strategy" | "login" | "signup">("strategy");
+    const [modalMode, setModalMode] = useState<"strategy" | "login" | "signup" | "privacy" | "terms" | "cookie">("strategy");
     const [activeService, setActiveService] = useState(0);
 
     const services = [
@@ -124,6 +124,54 @@ const App = () => {
                                 </div>
                                 <button className="w-full py-3.5 bg-[#1978e5] text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:bg-blue-600 transition-colors mb-6 border border-[#1978e5]/20">Create Account</button>
                                 <p className="text-center text-xs text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">Already a member? <span onClick={() => setModalMode('login')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Log in</span></p>
+                            </div>
+                        )}
+
+                        {modalMode === 'privacy' && (
+                            <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
+                                <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Privacy Policy</h2>
+                                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p><strong>Last Updated: March 2026</strong></p>
+                                    <p>At Nis Automations Co., we engineer enterprise-grade AI systems, which requires us to handle data with the utmost security and privacy standards globally available.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Information We Collect</h3>
+                                    <p>We collect enterprise architecture telemetry, workflow mapping documents, and user profile data to authenticate your dashboard interactions. High-frequency conversation logs processed by our voice agents are heavily encrypted.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">2. How We Use Information</h3>
+                                    <p>Your data is strictly utilized to fine-tune your specific internal AI agents and coordinate routing schemas. Nis Automations Co. enforces a zero-retention policy on sensitive customer PII transacted through our conversational nodes.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">3. Data Security</h3>
+                                    <p>We deploy end-to-end VNet isolation, SOC-2 verified infrastructure, and military-grade AES-256 parameter encryption. No third-party LLM providers train on your proprietary inputs.</p>
+                                </div>
+                            </div>
+                        )}
+
+                        {modalMode === 'terms' && (
+                            <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
+                                <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Terms of Service</h2>
+                                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p><strong>Effective Date: March 2026</strong></p>
+                                    <p>By connecting your organizational data streams to the Nis Automations Co. architecture, you agree to these enterprise terms.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Use of Autonomous Agents</h3>
+                                    <p>You assume full responsibility for the operational boundaries set for deployed AI agents (e.g., WhatsApp bots, Voice IVR). Nis Automations Co. provides the structural framework but does not mandate the content of output responses.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">2. SLA and Uptime</h3>
+                                    <p>We guarantee a 99.99% uptime for the central routing engine. In the event of underlying LLM provider outages, our built-in failover logic automatically reroutes queries to secondary models.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">3. Intellectual Property</h3>
+                                    <p>All custom integration connectors and specialized RAG vectors built by our engineering division remain the intellectual property of Nis Automations Co. unless explicitly open-sourced.</p>
+                                </div>
+                            </div>
+                        )}
+
+                        {modalMode === 'cookie' && (
+                            <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
+                                <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Cookie Policy</h2>
+                                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p><strong>Effective Date: March 2026</strong></p>
+                                    <p>Nis Automations Co. leverages sophisticated local storage mechanisms and cookies to ensure seamless identity management across your multi-app enterprise dashboard.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Authentication Cookies</h3>
+                                    <p>Required to maintain your secure JWT session tokens while you rapidly switch between Agent Configs and API Logs.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">2. Performance Telemetry</h3>
+                                    <p>We track client-side rendering performance to constantly optimize the DOM load speeds, ensuring our dashboards react instantly.</p>
+                                    <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">3. Managing Permissions</h3>
+                                    <p>While you may block performance cookies via browser extensions, doing so to secure authentication cookies will permanently log you out of the automation routing engine.</p>
+                                </div>
                             </div>
                         )}
                         
@@ -357,9 +405,9 @@ const App = () => {
             <footer className="bg-gray-50 dark:bg-[#0a0a0c] border-t border-gray-200 dark:border-gray-800 py-16">
                 <div className="flex flex-col justify-center items-center gap-10 max-w-7xl mx-auto px-8">
                     <div className="flex flex-wrap items-center justify-center gap-8 border-b border-gray-200 dark:border-gray-800 pb-8 w-full max-w-2xl">
-                        <a className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors" href="#">Privacy Policy</a>
-                        <a className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors" href="#">Terms of Service</a>
-                        <a className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors" href="#">Cookie Policy</a>
+                        <a onClick={() => { setModalMode('privacy'); setIsModalOpen(true); }} className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Privacy Policy</a>
+                        <a onClick={() => { setModalMode('terms'); setIsModalOpen(true); }} className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Terms of Service</a>
+                        <a onClick={() => { setModalMode('cookie'); setIsModalOpen(true); }} className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Cookie Policy</a>
                     </div>
                     
                     <div className="flex flex-col items-center justify-center gap-4">
