@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react';
+import { supabase } from './lib/supabaseClient';
 
 const App = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalMode, setModalMode] = useState<"strategy" | "login" | "signup" | "privacy" | "terms" | "cookie">("strategy");
     const [activeService, setActiveService] = useState(0);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [user, setUser] = useState<any>(null);
 
     const services = [
         {
@@ -89,9 +94,32 @@ const App = () => {
                             <div className="animate-fade-in transition-all">
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Let's Build Your AI</h2>
                                 <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm leading-relaxed text-center">Drop your work email below. Our automation architects will reach out within 2 hours to map your workflows.</p>
-                                <input type="email" placeholder="work@company.com" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 mb-4 focus:ring-2 focus:ring-[#1978e5] outline-none text-gray-900 dark:text-white transition-colors" />
-                                <button onClick={() => { alert('Request received successfully! We will be in touch.'); setIsModalOpen(false); }} className="w-full bg-[#1978e5] text-white py-3.5 rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20 hover:scale-[1.02]">
-                                    Request Strategy Call
+                                <input 
+                                    type="email" 
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="work@company.com" 
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 mb-4 focus:ring-2 focus:ring-[#1978e5] outline-none text-gray-900 dark:text-white transition-colors" 
+                                />
+                                <button 
+                                    disabled={isSubmitting}
+                                    onClick={async () => {
+                                        if (!email) return;
+                                        setIsSubmitting(true);
+                                        const { error } = await supabase.from('leads').insert([{ email, source: 'Strategy Call Modal' }]);
+                                        setIsSubmitting(false);
+                                        if (error) {
+                                            alert('Connection Error. Please check your network and try again.');
+                                            console.error(error);
+                                            return;
+                                        }
+                                        alert('Request received successfully! We will be in touch shortly.');
+                                        setEmail('');
+                                        setIsModalOpen(false);
+                                    }}
+                                    className="w-full bg-[#1978e5] text-white py-3.5 rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20 hover:scale-[1.02] disabled:opacity-50"
+                                >
+                                    {isSubmitting ? 'Routing...' : 'Request Strategy Call'}
                                 </button>
                                 <p className="text-center text-xs text-gray-500 mt-6 pt-4 border-t border-gray-200 dark:border-gray-800">Need dashboard access? <span onClick={() => setModalMode('login')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Login here.</span></p>
                             </div>
@@ -102,10 +130,20 @@ const App = () => {
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Welcome Back</h2>
                                 <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Sign in to your Nis Automations Co. dashboard.</p>
                                 <div className="space-y-4 mb-6">
-                                    <input type="email" placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
-                                    <input type="password" placeholder="Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
+                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
+                                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
                                 </div>
-                                <button className="w-full py-3.5 bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:opacity-80 transition-opacity mb-6">Sign In</button>
+                                <button disabled={isSubmitting} onClick={async () => {
+                                    setIsSubmitting(true);
+                                    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+                                    setIsSubmitting(false);
+                                    if (error) { alert(error.message); return; }
+                                    setUser(data.user);
+                                    setIsModalOpen(false);
+                                    setEmail(''); setPassword('');
+                                }} className="w-full py-3.5 bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:opacity-80 transition-opacity mb-6 disabled:opacity-50">
+                                    {isSubmitting ? 'Verifying...' : 'Sign In'}
+                                </button>
                                 <p className="text-center text-xs text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">Don't have an account? <span onClick={() => setModalMode('signup')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Create one</span></p>
                             </div>
                         )}
@@ -115,14 +153,21 @@ const App = () => {
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Create Account</h2>
                                 <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Join Nis Automations Co. and scale your workflows.</p>
                                 <div className="space-y-4 mb-6">
-                                    <div className="flex gap-4">
-                                        <input type="text" placeholder="First Name" className="w-1/2 px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
-                                        <input type="text" placeholder="Last Name" className="w-1/2 px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
-                                    </div>
-                                    <input type="email" placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
-                                    <input type="password" placeholder="Create Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
+                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
+                                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Create Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
                                 </div>
-                                <button className="w-full py-3.5 bg-[#1978e5] text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:bg-blue-600 transition-colors mb-6 border border-[#1978e5]/20">Create Account</button>
+                                <button disabled={isSubmitting} onClick={async () => {
+                                    if (!email || !password) return;
+                                    setIsSubmitting(true);
+                                    const { error } = await supabase.auth.signUp({ email, password });
+                                    setIsSubmitting(false);
+                                    if (error) { alert(error.message); return; }
+                                    alert('Success! Check your email for the confirmation link.');
+                                    setModalMode('login');
+                                    setPassword('');
+                                }} className="w-full py-3.5 bg-[#1978e5] text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:bg-blue-600 transition-colors mb-6 border border-[#1978e5]/20 disabled:opacity-50">
+                                    {isSubmitting ? 'Registering...' : 'Create Account'}
+                                </button>
                                 <p className="text-center text-xs text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">Already a member? <span onClick={() => setModalMode('login')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Log in</span></p>
                             </div>
                         )}
@@ -220,7 +265,11 @@ const App = () => {
                     </div>
                     
                     <div className="flex items-center gap-6">
-                        <button onClick={() => { setModalMode("login"); setIsModalOpen(true); }} className="text-gray-600 dark:text-gray-400 font-bold text-sm tracking-wide hover:text-gray-900 dark:hover:text-[#60A5FA] transition-colors hidden sm:block">Login</button>
+                        {user ? (
+                            <button onClick={async () => { await supabase.auth.signOut(); setUser(null); }} className="text-gray-600 dark:text-gray-400 font-bold text-sm tracking-wide hover:text-red-500 transition-colors hidden sm:block">Sign Out</button>
+                        ) : (
+                            <button onClick={() => { setModalMode("login"); setIsModalOpen(true); }} className="text-gray-600 dark:text-gray-400 font-bold text-sm tracking-wide hover:text-gray-900 dark:hover:text-[#60A5FA] transition-colors hidden sm:block">Login</button>
+                        )}
                         <button onClick={() => { setModalMode("strategy"); setIsModalOpen(true); }} className="bg-[#1978e5] text-white px-6 py-2.5 rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-blue-600 transition-colors active:scale-95 duration-150 shadow-lg shadow-blue-500/20">
                             Get Started
                         </button>
