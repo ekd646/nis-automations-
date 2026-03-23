@@ -1,10 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://ihbjcltiuhmjgcgmoulx.supabase.co';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_sIjRBtxtVL831IIV7gAM_Q_1cqd_rwg';
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn('Supabase URL and Anon Key are required! Please set them in .env.local')
-}
-
-export const supabase = createClient(supabaseUrl || '', supabaseAnonKey || '')
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
