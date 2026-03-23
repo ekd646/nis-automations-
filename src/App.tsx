@@ -145,7 +145,20 @@ const App = () => {
             <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#0a0a0c]/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
                 <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
                     <a onClick={(e) => scrollToSection('hero', e)} href="#hero" className="flex items-center gap-2 group cursor-pointer">
-                        <img src="/logo.png" alt="Nis Automations Logo" className="w-10 h-10 rounded-[10px] shadow-lg drop-shadow-[0_0_15px_rgba(25,120,229,0.3)] transform group-hover:scale-105 transition-transform" />
+                        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(25,120,229,0.3)]">
+                          <defs>
+                            <linearGradient id="autoCore" x1="0" y1="0" x2="100" y2="100">
+                              <stop offset="0%" stopColor="#60A5FA" />
+                              <stop offset="100%" stopColor="#1978e5" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M50 5 L10 28 L10 72 L50 95 L90 72 L90 28 Z" fill="url(#autoCore)" opacity="0.15" />
+                          <path d="M50 15 L18 33 L18 67 L50 85 L82 67 L82 33 Z" fill="url(#autoCore)" />
+                          <path d="M50 50 L18 33 L50 15 Z" fill="#ffffff" opacity="0.3" />
+                          <path d="M50 50 L82 33 L82 67 Z" fill="#000000" opacity="0.2" />
+                          <circle cx="50" cy="50" r="12" fill="#ffffff" className="dark:fill-[#0B3B7A]" />
+                          <circle cx="50" cy="50" r="4" fill="#1978e5" className="dark:fill-[#60A5FA]" />
+                        </svg>
                         <div className="flex flex-col ml-3 hidden sm:flex">
                           <span className="text-xl md:text-2xl font-black tracking-widest text-gray-900 dark:text-white uppercase font-sans leading-none">Nis Automations <span className="text-[#1978e5]">Co.</span></span>
                           <span className="text-[9px] font-bold tracking-[0.4em] text-[#1978e5] uppercase leading-none mt-1">Enterprise Architecture</span>
