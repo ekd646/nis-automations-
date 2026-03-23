@@ -145,25 +145,7 @@ const App = () => {
             <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#0a0a0c]/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
                 <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
                     <a onClick={(e) => scrollToSection('hero', e)} href="#hero" className="flex items-center gap-2 group cursor-pointer">
-                        <svg className="shadow-lg drop-shadow-[0_0_15px_rgba(25,120,229,0.3)] transform group-hover:scale-105 transition-transform" width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <defs>
-                            <linearGradient id="autoGradient" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                              <stop offset="0%" stopColor="#60A5FA" />
-                              <stop offset="50%" stopColor="#1978e5" />
-                              <stop offset="100%" stopColor="#0B3B7A" />
-                            </linearGradient>
-                            <linearGradient id="glowG" x1="0" y1="0" x2="100" y2="100">
-                              <stop offset="0%" stopColor="#ffffff" />
-                              <stop offset="100%" stopColor="#60A5FA" />
-                            </linearGradient>
-                          </defs>
-                          <rect width="100" height="100" rx="24" fill="#ffffff" stroke="url(#autoGradient)" strokeWidth="3" className="dark:fill-[#0a0a0c]"/>
-                          <path d="M30 70 L30 30 L70 70 L70 30" stroke="url(#glowG)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
-                          <circle cx="30" cy="30" r="6" fill="#1978e5"/>
-                          <circle cx="70" cy="70" r="6" fill="#1978e5"/>
-                          <circle cx="30" cy="70" r="6" fill="#1978e5"/>
-                          <circle cx="70" cy="30" r="6" fill="#1978e5"/>
-                        </svg>
+                        <img src="/logo.png" alt="Nis Automations Logo" className="w-10 h-10 rounded-[10px] shadow-lg drop-shadow-[0_0_15px_rgba(25,120,229,0.3)] transform group-hover:scale-105 transition-transform" />
                         <div className="flex flex-col ml-3 hidden sm:flex">
                           <span className="text-xl md:text-2xl font-black tracking-widest text-gray-900 dark:text-white uppercase font-sans leading-none">Nis Automations <span className="text-[#1978e5]">Co.</span></span>
                           <span className="text-[9px] font-bold tracking-[0.4em] text-[#1978e5] uppercase leading-none mt-1">Enterprise Architecture</span>
