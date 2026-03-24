@@ -467,7 +467,47 @@ const App = () => {
                             <span className="bg-white px-3 py-1.5 rounded shadow-sm border border-gray-100 text-[#142A7C] font-extrabold text-[12px] tracking-tighter">VISA</span>
                             <span className="bg-white px-3 py-1.5 rounded shadow-sm border border-gray-100 flex items-center justify-center"><div className="flex"><div className="w-3.5 h-3.5 rounded-full bg-[#EA001B] mix-blend-multiply relative left-1.5 z-10"></div><div className="w-3.5 h-3.5 rounded-full bg-[#F79E1B] mix-blend-multiply relative right-1"></div></div></span>
                             <span className="bg-[#1A1F36] border border-gray-600 px-3 py-1.5 rounded shadow-sm text-[#635BFF] font-bold text-[12px]">stripe</span>
-                            <span className="bg-white dark:bg-black px-3 py-1.5 rounded shadow-sm border border-gray-200 dark:border-gray-700 text-black dark:text-white font-extrabold text-[12px]"> Pay</span>
+                            <span className="bg-white dark:bg-black px-3 py-1.5 rounded shadow-sm border border-gray-200 dark:border-gray-700 text-black dark:text-white font-extrabold text-[12px]"> Pay</span>
+                            <span className="bg-[#003087] px-3 py-1.5 rounded shadow-sm border border-[#003087] flex items-center"><span className="text-[#009cde] font-bold text-[11px]">Pay</span><span className="text-white font-bold text-[11px]">Pal</span></span>
+                        </div>
+                    </div>
+
+                    {/* International Legal Compliance */}
+                    <div className="w-full max-w-5xl border-t border-gray-200 dark:border-gray-800 pt-8">
+                        <h4 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-6">International E-Commerce & AI Legal Compliance</h4>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">EU GDPR</p>
+                                <p className="text-gray-400 text-[9px]">General Data Protection Regulation 2016/679</p>
+                            </div>
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">PSD2 / SCA</p>
+                                <p className="text-gray-400 text-[9px]">Strong Customer Authentication for Payments</p>
+                            </div>
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">EU Consumer Rights</p>
+                                <p className="text-gray-400 text-[9px]">Directive 2011/83 — 14-Day Withdrawal</p>
+                            </div>
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">DSA / DMA</p>
+                                <p className="text-gray-400 text-[9px]">Digital Services & Digital Markets Act</p>
+                            </div>
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">ePrivacy</p>
+                                <p className="text-gray-400 text-[9px]">Cookie Consent & Electronic Communications</p>
+                            </div>
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">AML / KYC</p>
+                                <p className="text-gray-400 text-[9px]">Anti-Money Laundering Directive 6 (AMLD6)</p>
+                            </div>
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">EU AI Act</p>
+                                <p className="text-gray-400 text-[9px]">Artificial Intelligence Regulation 2024/1689</p>
+                            </div>
+                            <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
+                                <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">KVKK (TR)</p>
+                                <p className="text-gray-400 text-[9px]">Kişisel Verilerin Korunması Kanunu No. 6698</p>
+                            </div>
                         </div>
                     </div>
                     
