@@ -128,7 +128,7 @@ const App = () => {
                         {modalMode === 'login' && (
                             <div className="animate-fade-in transition-all">
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Welcome Back</h2>
-                                <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Sign in to your Nis Automations Co. dashboard.</p>
+                                <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Sign in to your Q&V Automations Co. dashboard.</p>
                                 <div className="space-y-4 mb-6">
                                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
                                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
@@ -151,7 +151,7 @@ const App = () => {
                         {modalMode === 'signup' && (
                             <div className="animate-fade-in transition-all">
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Create Account</h2>
-                                <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Join Nis Automations Co. and scale your workflows.</p>
+                                <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Join Q&V Automations Co. and scale your workflows.</p>
                                 <div className="space-y-4 mb-6">
                                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
                                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Create Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
@@ -177,11 +177,11 @@ const App = () => {
                                 <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Privacy Policy</h2>
                                 <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                                     <p><strong>Last Updated: March 2026</strong></p>
-                                    <p>At Nis Automations Co., we engineer enterprise-grade AI systems, which requires us to handle data with the utmost security and privacy standards globally available.</p>
+                                    <p>At Q&V Automations Co., we engineer enterprise-grade AI systems, which requires us to handle data with the utmost security and privacy standards globally available.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Information We Collect</h3>
                                     <p>We collect enterprise architecture telemetry, workflow mapping documents, and user profile data to authenticate your dashboard interactions. High-frequency conversation logs processed by our voice agents are heavily encrypted.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">2. How We Use Information</h3>
-                                    <p>Your data is strictly utilized to fine-tune your specific internal AI agents and coordinate routing schemas. Nis Automations Co. enforces a zero-retention policy on sensitive customer PII transacted through our conversational nodes.</p>
+                                    <p>Your data is strictly utilized to fine-tune your specific internal AI agents and coordinate routing schemas. Q&V Automations Co. enforces a zero-retention policy on sensitive customer PII transacted through our conversational nodes.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">3. Data Security</h3>
                                     <p>We deploy end-to-end VNet isolation, SOC-2 verified infrastructure, and military-grade AES-256 parameter encryption. No third-party LLM providers train on your proprietary inputs.</p>
                                 </div>
@@ -193,13 +193,13 @@ const App = () => {
                                 <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Terms of Service</h2>
                                 <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                                     <p><strong>Effective Date: March 2026</strong></p>
-                                    <p>By connecting your organizational data streams to the Nis Automations Co. architecture, you agree to these enterprise terms.</p>
+                                    <p>By connecting your organizational data streams to the Q&V Automations Co. architecture, you agree to these enterprise terms.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Use of Autonomous Agents</h3>
-                                    <p>You assume full responsibility for the operational boundaries set for deployed AI agents (e.g., WhatsApp bots, Voice IVR). Nis Automations Co. provides the structural framework but does not mandate the content of output responses.</p>
+                                    <p>You assume full responsibility for the operational boundaries set for deployed AI agents (e.g., WhatsApp bots, Voice IVR). Q&V Automations Co. provides the structural framework but does not mandate the content of output responses.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">2. SLA and Uptime</h3>
                                     <p>We guarantee a 99.99% uptime for the central routing engine. In the event of underlying LLM provider outages, our built-in failover logic automatically reroutes queries to secondary models.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">3. Intellectual Property</h3>
-                                    <p>All custom integration connectors and specialized RAG vectors built by our engineering division remain the intellectual property of Nis Automations Co. unless explicitly open-sourced.</p>
+                                    <p>All custom integration connectors and specialized RAG vectors built by our engineering division remain the intellectual property of Q&V Automations Co. unless explicitly open-sourced.</p>
                                 </div>
                             </div>
                         )}
@@ -209,7 +209,7 @@ const App = () => {
                                 <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Cookie Policy</h2>
                                 <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                                     <p><strong>Effective Date: March 2026</strong></p>
-                                    <p>Nis Automations Co. leverages sophisticated local storage mechanisms and cookies to ensure seamless identity management across your multi-app enterprise dashboard.</p>
+                                    <p>Q&V Automations Co. leverages sophisticated local storage mechanisms and cookies to ensure seamless identity management across your multi-app enterprise dashboard.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Authentication Cookies</h3>
                                     <p>Required to maintain your secure JWT session tokens while you rapidly switch between Agent Configs and API Logs.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">2. Performance Telemetry</h3>
@@ -253,7 +253,7 @@ const App = () => {
                           <circle cx="50" cy="50" r="4" fill="#1978e5" className="dark:fill-[#60A5FA]" />
                         </svg>
                         <div className="flex flex-col ml-3 hidden sm:flex">
-                          <span className="text-xl md:text-2xl font-black tracking-widest text-gray-900 dark:text-white uppercase font-sans leading-none">Nis Automations <span className="text-[#1978e5]">Co.</span></span>
+                          <span className="text-xl md:text-2xl font-black tracking-widest text-gray-900 dark:text-white uppercase font-sans leading-none">Q&V Automations <span className="text-[#1978e5]">Co.</span></span>
                           <span className="text-[9px] font-bold tracking-[0.4em] text-[#1978e5] uppercase leading-none mt-1">Enterprise Architecture</span>
                         </div>
                     </a>
@@ -309,7 +309,7 @@ const App = () => {
                                         <span className="material-symbols-outlined text-white" style={{ fontVariationSettings: "'FILL' 1" }}>bolt</span>
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold">Nis Automations Co. Engine</p>
+                                        <p className="text-sm font-bold">Q&V Automations Co. Engine</p>
                                         <p className="text-xs text-green-500 flex items-center gap-1 font-mono tracking-tighter">
                                             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Active Integration Node
                                         </p>
@@ -356,7 +356,7 @@ const App = () => {
                 <section id="solutions" className="py-24 max-w-7xl mx-auto px-6 border-t border-gray-200 dark:border-gray-800">
                     <div className="mb-16 reveal-on-scroll">
                         <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Our Core AI Services</h2>
-                        <p className="text-on-surface-variant max-w-2xl text-lg">Select an implementation module below to view how Nis Automations Co. structures deterministic AI pipelines specifically for your sector.</p>
+                        <p className="text-on-surface-variant max-w-2xl text-lg">Select an implementation module below to view how Q&V Automations Co. structures deterministic AI pipelines specifically for your sector.</p>
                     </div>
                     
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 h-auto lg:h-[560px] reveal-on-scroll delay-100">
@@ -437,7 +437,7 @@ const App = () => {
                         </div>
                         <div className="relative z-10">
                             <h2 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter shadow-sm">Ready to automate the future?</h2>
-                            <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto font-medium">Join the ranks of high-performance enterprises leveraging Nis Automations Co. architectures.</p>
+                            <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto font-medium">Join the ranks of high-performance enterprises leveraging Q&V Automations Co. architectures.</p>
                             <div className="flex flex-col md:flex-row justify-center gap-6">
                                 <button onClick={() => { setModalMode("signup"); setIsModalOpen(true); }} className="bg-[#1978e5] text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 shadow-[0_10px_40px_rgba(25,120,229,0.4)] transition-all">
                                     Start Your Migration
@@ -472,7 +472,7 @@ const App = () => {
                     </div>
                     
                     <div className="text-xs font-inter text-gray-400 text-center font-medium mt-4">
-                        © 2026 Nis Automations Co. All rights reserved. Architected for Tomorrow.
+                        © 2026 Q&V Automations Co. All rights reserved. Architected for Tomorrow.
                     </div>
                 </div>
             </footer>
