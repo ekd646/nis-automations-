@@ -86,14 +86,14 @@ const App = () => {
             {isModalOpen && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-opacity duration-300">
                     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 max-w-md w-full relative shadow-2xl transform transition-transform duration-300 scale-100">
-                        <button onClick={() => setIsModalOpen(false)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        <button onClick={() => setIsModalOpen(false)} className="absolute top-4 right-4 text-[#d8d29b]/80 hover:text-gray-900 dark:hover:text-white transition-colors">
                             <span className="material-symbols-outlined" translate="no">close</span>
                         </button>
                         
                         {modalMode === 'strategy' && (
                             <div className="animate-fade-in transition-all">
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Let's Build Your AI</h2>
-                                <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm leading-relaxed text-center">Drop your work email below. Our automation architects will reach out within 2 hours to map your workflows.</p>
+                                <p className="text-[#d8d29b]/80 dark:text-[#d8d29b]/60 mb-8 text-sm leading-relaxed text-center">Drop your work email below. Our automation architects will reach out within 2 hours to map your workflows.</p>
                                 <input 
                                     type="email" 
                                     value={email}
@@ -117,18 +117,18 @@ const App = () => {
                                         setEmail('');
                                         setIsModalOpen(false);
                                     }}
-                                    className="w-full bg-[#1978e5] text-white py-3.5 rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20 hover:scale-[1.02] disabled:opacity-50"
+                                    className="w-full bg-[#1978e5] text-white py-3.5 rounded-xl font-bold hover:bg-[#0a2e45] transition-colors shadow-lg shadow-blue-500/20 hover:scale-[1.02] disabled:opacity-50"
                                 >
                                     {isSubmitting ? 'Routing...' : 'Request Strategy Call'}
                                 </button>
-                                <p className="text-center text-xs text-gray-500 mt-6 pt-4 border-t border-gray-200 dark:border-gray-800">Need dashboard access? <span onClick={() => setModalMode('login')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Login here.</span></p>
+                                <p className="text-center text-xs text-[#d8d29b]/80 mt-6 pt-4 border-t border-gray-200 dark:border-gray-800">Need dashboard access? <span onClick={() => setModalMode('login')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Login here.</span></p>
                             </div>
                         )}
 
                         {modalMode === 'login' && (
                             <div className="animate-fade-in transition-all">
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Welcome Back</h2>
-                                <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Sign in to your Observice Automations Co. dashboard.</p>
+                                <p className="text-[#d8d29b]/80 dark:text-[#d8d29b]/60 mb-8 text-sm text-center">Sign in to your Observice Automations Co. dashboard.</p>
                                 <div className="space-y-4 mb-6">
                                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
                                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
@@ -144,14 +144,14 @@ const App = () => {
                                 }} className="w-full py-3.5 bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:opacity-80 transition-opacity mb-6 disabled:opacity-50">
                                     {isSubmitting ? 'Verifying...' : 'Sign In'}
                                 </button>
-                                <p className="text-center text-xs text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">Don't have an account? <span onClick={() => setModalMode('signup')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Create one</span></p>
+                                <p className="text-center text-xs text-[#d8d29b]/80 border-t border-gray-200 dark:border-gray-800 pt-4">Don't have an account? <span onClick={() => setModalMode('signup')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Create one</span></p>
                             </div>
                         )}
 
                         {modalMode === 'signup' && (
                             <div className="animate-fade-in transition-all">
                                 <h2 className="text-3xl font-extrabold mb-2 text-gray-900 dark:text-white text-center tracking-tight">Create Account</h2>
-                                <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm text-center">Join Observice Automations Co. and scale your workflows.</p>
+                                <p className="text-[#d8d29b]/80 dark:text-[#d8d29b]/60 mb-8 text-sm text-center">Join Observice Automations Co. and scale your workflows.</p>
                                 <div className="space-y-4 mb-6">
                                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work Email" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
                                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Create Password" className="w-full px-4 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#1978e5] transition-colors" />
@@ -165,17 +165,17 @@ const App = () => {
                                     alert('Success! Check your email for the confirmation link.');
                                     setModalMode('login');
                                     setPassword('');
-                                }} className="w-full py-3.5 bg-[#1978e5] text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:bg-blue-600 transition-colors mb-6 border border-[#1978e5]/20 disabled:opacity-50">
+                                }} className="w-full py-3.5 bg-[#1978e5] text-white font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:bg-[#0a2e45] transition-colors mb-6 border border-[#1978e5]/20 disabled:opacity-50">
                                     {isSubmitting ? 'Registering...' : 'Create Account'}
                                 </button>
-                                <p className="text-center text-xs text-gray-500 border-t border-gray-200 dark:border-gray-800 pt-4">Already a member? <span onClick={() => setModalMode('login')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Log in</span></p>
+                                <p className="text-center text-xs text-[#d8d29b]/80 border-t border-gray-200 dark:border-gray-800 pt-4">Already a member? <span onClick={() => setModalMode('login')} className="text-[#1978e5] font-bold cursor-pointer hover:underline">Log in</span></p>
                             </div>
                         )}
 
                         {modalMode === 'privacy' && (
                             <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
                                 <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Privacy Policy</h2>
-                                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="space-y-4 text-sm text-gray-600 dark:text-[#d8d29b]/60 leading-relaxed">
                                     <p><strong>Last Updated: March 2026</strong></p>
                                     <p>At Observice Automations Co., we engineer enterprise-grade AI systems, which requires us to handle data with the utmost security and privacy standards globally available.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Information We Collect</h3>
@@ -191,7 +191,7 @@ const App = () => {
                         {modalMode === 'terms' && (
                             <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
                                 <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Terms of Service</h2>
-                                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="space-y-4 text-sm text-gray-600 dark:text-[#d8d29b]/60 leading-relaxed">
                                     <p><strong>Effective Date: March 2026</strong></p>
                                     <p>By connecting your organizational data streams to the Observice Automations Co. architecture, you agree to these enterprise terms.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Use of Autonomous Agents</h3>
@@ -207,7 +207,7 @@ const App = () => {
                         {modalMode === 'cookie' && (
                             <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
                                 <h2 className="text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Cookie Policy</h2>
-                                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="space-y-4 text-sm text-gray-600 dark:text-[#d8d29b]/60 leading-relaxed">
                                     <p><strong>Effective Date: March 2026</strong></p>
                                     <p>Observice Automations Co. leverages sophisticated local storage mechanisms and cookies to ensure seamless identity management across your multi-app enterprise dashboard.</p>
                                     <h3 className="text-lg text-gray-900 dark:text-white font-bold mt-6 mb-2">1. Authentication Cookies</h3>
@@ -221,7 +221,7 @@ const App = () => {
                         )}
                         
                         <div className="mt-4 pt-4 text-center">
-                            <div className="flex items-center justify-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 mb-3 font-medium">
+                            <div className="flex items-center justify-center gap-1.5 text-xs text-[#d8d29b]/80 dark:text-[#d8d29b]/60 mb-3 font-medium">
                                 <span className="material-symbols-outlined text-[14px] text-green-500">lock</span> Guaranteed Safe & Secure Configuration
                             </div>
                             <div className="flex justify-center items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
@@ -259,18 +259,18 @@ const App = () => {
                     </a>
                     
                     <div className="hidden md:flex items-center gap-8 ml-auto mr-12">
-                        <a onClick={(e) => scrollToSection('solutions', e)} className="text-gray-600 dark:text-gray-400 hover:text-[#1978e5] font-semibold text-xs uppercase tracking-widest transition-colors cursor-pointer" href="#solutions">Solutions</a>
-                        <a onClick={(e) => scrollToSection('process', e)} className="text-gray-600 dark:text-gray-400 hover:text-[#1978e5] font-semibold text-xs uppercase tracking-widest transition-colors cursor-pointer" href="#process">Process</a>
-                        <a onClick={(e) => scrollToSection('case-studies', e)} className="text-gray-600 dark:text-gray-400 hover:text-[#1978e5] font-semibold text-xs uppercase tracking-widest transition-colors cursor-pointer" href="#case-studies">Clients</a>
+                        <a onClick={(e) => scrollToSection('solutions', e)} className="text-gray-600 dark:text-[#d8d29b]/60 hover:text-[#1978e5] font-semibold text-xs uppercase tracking-widest transition-colors cursor-pointer" href="#solutions">Solutions</a>
+                        <a onClick={(e) => scrollToSection('process', e)} className="text-gray-600 dark:text-[#d8d29b]/60 hover:text-[#1978e5] font-semibold text-xs uppercase tracking-widest transition-colors cursor-pointer" href="#process">Process</a>
+                        <a onClick={(e) => scrollToSection('case-studies', e)} className="text-gray-600 dark:text-[#d8d29b]/60 hover:text-[#1978e5] font-semibold text-xs uppercase tracking-widest transition-colors cursor-pointer" href="#case-studies">Clients</a>
                     </div>
                     
                     <div className="flex items-center gap-6">
                         {user ? (
-                            <button onClick={async () => { await supabase.auth.signOut(); setUser(null); }} className="text-gray-600 dark:text-gray-400 font-bold text-sm tracking-wide hover:text-red-500 transition-colors hidden sm:block">Sign Out</button>
+                            <button onClick={async () => { await supabase.auth.signOut(); setUser(null); }} className="text-gray-600 dark:text-[#d8d29b]/60 font-bold text-sm tracking-wide hover:text-red-500 transition-colors hidden sm:block">Sign Out</button>
                         ) : (
-                            <button onClick={() => { setModalMode("login"); setIsModalOpen(true); }} className="text-gray-600 dark:text-gray-400 font-bold text-sm tracking-wide hover:text-gray-900 dark:hover:text-[#60A5FA] transition-colors hidden sm:block">Login</button>
+                            <button onClick={() => { setModalMode("login"); setIsModalOpen(true); }} className="text-gray-600 dark:text-[#d8d29b]/60 font-bold text-sm tracking-wide hover:text-gray-900 dark:hover:text-[#60A5FA] transition-colors hidden sm:block">Login</button>
                         )}
-                        <button onClick={() => { setModalMode("strategy"); setIsModalOpen(true); }} className="bg-[#1978e5] text-white px-6 py-2.5 rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-blue-600 transition-colors active:scale-95 duration-150 shadow-lg shadow-blue-500/20">
+                        <button onClick={() => { setModalMode("strategy"); setIsModalOpen(true); }} className="bg-[#1978e5] text-white px-6 py-2.5 rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-[#0a2e45] transition-colors active:scale-95 duration-150 shadow-lg shadow-blue-500/20">
                             Get Started
                         </button>
                     </div>
@@ -281,7 +281,7 @@ const App = () => {
                 <section id="hero" className="relative overflow-hidden py-24 md:py-32 hero-gradient">
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="z-10 animate-hero">
-                        <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-200 dark:border-blue-800">
+                        <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-[#085f52]/20 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-[#085f52]/30 dark:border-blue-800">
                             Enterprise AI Architectures
                         </span>
                         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8 tracking-tighter">
@@ -315,7 +315,7 @@ const App = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <span className="material-symbols-outlined text-gray-500">more_horiz</span>
+                                <span className="material-symbols-outlined text-[#d8d29b]/80">more_horiz</span>
                             </div>
                             <div className="space-y-6" id="ai-chat-container">
                                 <div className="flex gap-3 ai-message delay-300">
@@ -327,7 +327,7 @@ const App = () => {
                                     </div>
                                 </div>
                                 <div className="flex gap-3 flex-row-reverse ai-message delay-500">
-                                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <div className="w-8 h-8 rounded-full bg-[#085f52]/20 flex items-center justify-center">
                                         <span className="material-symbols-outlined text-sm text-[#1978e5]">smart_toy</span>
                                     </div>
                                     <div className="bg-[#1978e5] text-white p-4 rounded-2xl rounded-tr-none text-sm max-w-[80%] shadow-lg font-medium leading-relaxed">
@@ -339,11 +339,11 @@ const App = () => {
                                 </div>
                                 <div className="grid grid-cols-2 gap-4 ai-message delay-700">
                                     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 rounded-xl shadow-sm">
-                                        <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Efficiency Gain</p>
+                                        <p className="text-xs text-[#d8d29b]/80 uppercase tracking-widest font-bold mb-1">Efficiency Gain</p>
                                         <p className="text-2xl font-black text-[#1978e5]">+34.2%</p>
                                     </div>
                                     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 rounded-xl shadow-sm">
-                                        <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Active Bots</p>
+                                        <p className="text-xs text-[#d8d29b]/80 uppercase tracking-widest font-bold mb-1">Active Bots</p>
                                         <p className="text-2xl font-black dark:text-white text-gray-900">1,204</p>
                                     </div>
                                 </div>
@@ -365,14 +365,14 @@ const App = () => {
                                 <button 
                                   key={idx}
                                   onClick={() => setActiveService(idx)}
-                                  className={`text-left p-6 rounded-[24px] transition-all duration-300 flex items-center gap-4 group ${activeService === idx ? 'bg-[#1978e5] text-white shadow-xl scale-[1.02]' : 'bg-white dark:bg-[#0a0a0c] border border-gray-200 dark:border-gray-800 hover:border-[#1978e5]/50 hover:bg-blue-50/50 dark:hover:bg-blue-900/10'}`}
+                                  className={`text-left p-6 rounded-[24px] transition-all duration-300 flex items-center gap-4 group ${activeService === idx ? 'bg-[#1978e5] text-white shadow-xl scale-[1.02]' : 'bg-white dark:bg-[#0a0a0c] border border-gray-200 dark:border-gray-800 hover:border-[#1978e5]/50 hover:bg-[#085f52]/5 dark:hover:bg-blue-900/10'}`}
                                 >
-                                    <div className={`min-w-12 h-12 rounded-xl flex items-center justify-center transition-colors shadow-inner ${activeService === idx ? 'bg-white/20' : 'bg-blue-100 dark:bg-gray-800 text-[#1978e5] group-hover:bg-[#1978e5] group-hover:text-white'}`}>
+                                    <div className={`min-w-12 h-12 rounded-xl flex items-center justify-center transition-colors shadow-inner ${activeService === idx ? 'bg-white/20' : 'bg-[#085f52]/20 dark:bg-gray-800 text-[#1978e5] group-hover:bg-[#1978e5] group-hover:text-white'}`}>
                                         <span className="material-symbols-outlined">{svc.icon}</span>
                                     </div>
                                     <div>
                                         <h3 className={`font-bold text-lg mb-1 leading-tight ${activeService === idx ? 'text-white' : 'text-gray-900 dark:text-white'}`}>{svc.title}</h3>
-                                        <p className={`text-sm hidden sm:block ${activeService === idx ? 'text-white/80' : 'text-gray-500 line-clamp-1'}`}>{svc.desc}</p>
+                                        <p className={`text-sm hidden sm:block ${activeService === idx ? 'text-white/80' : 'text-[#d8d29b]/80 line-clamp-1'}`}>{svc.desc}</p>
                                     </div>
                                 </button>
                             ))}
@@ -454,13 +454,13 @@ const App = () => {
             <footer className="bg-gray-50 dark:bg-[#0a0a0c] border-t border-gray-200 dark:border-gray-800 py-16">
                 <div className="flex flex-col justify-center items-center gap-10 max-w-7xl mx-auto px-8">
                     <div className="flex flex-wrap items-center justify-center gap-8 border-b border-gray-200 dark:border-gray-800 pb-8 w-full max-w-2xl">
-                        <a onClick={() => { setModalMode('privacy'); setIsModalOpen(true); }} className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Privacy Policy</a>
-                        <a onClick={() => { setModalMode('terms'); setIsModalOpen(true); }} className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Terms of Service</a>
-                        <a onClick={() => { setModalMode('cookie'); setIsModalOpen(true); }} className="text-xs font-inter text-gray-500 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Cookie Policy</a>
+                        <a onClick={() => { setModalMode('privacy'); setIsModalOpen(true); }} className="text-xs font-inter text-[#d8d29b]/80 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Privacy Policy</a>
+                        <a onClick={() => { setModalMode('terms'); setIsModalOpen(true); }} className="text-xs font-inter text-[#d8d29b]/80 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Terms of Service</a>
+                        <a onClick={() => { setModalMode('cookie'); setIsModalOpen(true); }} className="text-xs font-inter text-[#d8d29b]/80 hover:text-[#1978e5] dark:hover:text-[#1978e5] font-extrabold uppercase tracking-widest transition-colors cursor-pointer">Cookie Policy</a>
                     </div>
                     
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <span className="text-[10px] text-gray-400 font-extrabold uppercase tracking-[0.2em] flex items-center gap-1.5">
+                        <span className="text-[10px] text-[#d8d29b]/60 font-extrabold uppercase tracking-[0.2em] flex items-center gap-1.5">
                            <span className="material-symbols-outlined text-[14px] text-green-500">encrypted</span> Global Secure Configurations
                         </span>
                         <div className="flex gap-3 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 items-center justify-center bg-gray-200/50 dark:bg-gray-900/50 px-6 py-3 rounded-2xl border border-gray-200 dark:border-gray-800">
@@ -474,44 +474,44 @@ const App = () => {
 
                     {/* International Legal Compliance */}
                     <div className="w-full max-w-5xl border-t border-gray-200 dark:border-gray-800 pt-8">
-                        <h4 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-6">International E-Commerce & AI Legal Compliance</h4>
+                        <h4 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-[#d8d29b]/60 mb-6">International E-Commerce & AI Legal Compliance</h4>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">EU GDPR</p>
-                                <p className="text-gray-400 text-[9px]">General Data Protection Regulation 2016/679</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">General Data Protection Regulation 2016/679</p>
                             </div>
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">PSD2 / SCA</p>
-                                <p className="text-gray-400 text-[9px]">Strong Customer Authentication for Payments</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">Strong Customer Authentication for Payments</p>
                             </div>
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">EU Consumer Rights</p>
-                                <p className="text-gray-400 text-[9px]">Directive 2011/83 — 14-Day Withdrawal</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">Directive 2011/83 — 14-Day Withdrawal</p>
                             </div>
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">DSA / DMA</p>
-                                <p className="text-gray-400 text-[9px]">Digital Services & Digital Markets Act</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">Digital Services & Digital Markets Act</p>
                             </div>
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">ePrivacy</p>
-                                <p className="text-gray-400 text-[9px]">Cookie Consent & Electronic Communications</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">Cookie Consent & Electronic Communications</p>
                             </div>
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">AML / KYC</p>
-                                <p className="text-gray-400 text-[9px]">Anti-Money Laundering Directive 6 (AMLD6)</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">Anti-Money Laundering Directive 6 (AMLD6)</p>
                             </div>
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">EU AI Act</p>
-                                <p className="text-gray-400 text-[9px]">Artificial Intelligence Regulation 2024/1689</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">Artificial Intelligence Regulation 2024/1689</p>
                             </div>
                             <div className="bg-gray-100 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl p-3">
                                 <p className="text-[#1978e5] font-bold text-[10px] uppercase tracking-widest mb-1">KVKK (TR)</p>
-                                <p className="text-gray-400 text-[9px]">Kişisel Verilerin Korunması Kanunu No. 6698</p>
+                                <p className="text-[#d8d29b]/60 text-[9px]">Kişisel Verilerin Korunması Kanunu No. 6698</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div className="text-xs font-inter text-gray-400 text-center font-medium mt-4">
+                    <div className="text-xs font-inter text-[#d8d29b]/60 text-center font-medium mt-4">
                         © 2026 Observice Automations Co. All rights reserved. Architected for Tomorrow.
                     </div>
                 </div>
