@@ -79,7 +79,7 @@ const App = () => {
     }
   };
   return (
-    <div className="bg-[#0a2e45] text-[#d8d29b] font-body antialiased min-h-screen relative">
+    <div className="bg-[#0a2e45] text-white font-body antialiased min-h-screen relative">
       {" "}
       {isModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a2e45]/60 backdrop-blur-sm p-4 transition-opacity duration-300">
@@ -88,7 +88,7 @@ const App = () => {
             {" "}
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-white hover:text-[#d8d29b] :text-[#0a2e45] transition-colors"
+              className="absolute top-4 right-4 text-white hover:text-white :text-[#0a2e45] transition-colors"
             >
               {" "}
               <span className="material-symbols-outlined" translate="no">
@@ -98,7 +98,7 @@ const App = () => {
             {modalMode === "strategy" && (
               <div className="animate-fade-in transition-all">
                 {" "}
-                <h2 className="text-3xl font-extrabold mb-2 text-[#d8d29b] text-center tracking-tight">
+                <h2 className="text-3xl font-extrabold mb-2 text-white text-center tracking-tight">
                   Let's Build Your AI
                 </h2>{" "}
                 <p className="text-white mb-8 text-sm leading-relaxed text-center">
@@ -110,7 +110,7 @@ const App = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="work@company.com"
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl mb-4 focus:ring-2 focus:ring-[#085f52] outline-none text-[#d8d29b] transition-colors"
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl mb-4 focus:ring-2 focus:ring-[#085f52] outline-none text-white transition-colors"
                 />{" "}
                 <button
                   disabled={isSubmitting}
@@ -153,7 +153,7 @@ const App = () => {
             {modalMode === "login" && (
               <div className="animate-fade-in transition-all">
                 {" "}
-                <h2 className="text-3xl font-extrabold mb-2 text-[#d8d29b] text-center tracking-tight">
+                <h2 className="text-3xl font-extrabold mb-2 text-white text-center tracking-tight">
                   Welcome Back
                 </h2>{" "}
                 <p className="text-white mb-8 text-sm text-center">
@@ -166,14 +166,14 @@ const App = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Work Email"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-[#d8d29b] outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                   <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Password"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-[#d8d29b] outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                 </div>{" "}
                 <button
@@ -214,7 +214,7 @@ const App = () => {
             {modalMode === "signup" && (
               <div className="animate-fade-in transition-all">
                 {" "}
-                <h2 className="text-3xl font-extrabold mb-2 text-[#d8d29b] text-center tracking-tight">
+                <h2 className="text-3xl font-extrabold mb-2 text-white text-center tracking-tight">
                   Create Account
                 </h2>{" "}
                 <p className="text-white mb-8 text-sm text-center">
@@ -227,14 +227,14 @@ const App = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Work Email"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-[#d8d29b] outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                   <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Create Password"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-[#d8d29b] outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                 </div>{" "}
                 <button
@@ -276,7 +276,7 @@ const App = () => {
             {modalMode === "privacy" && (
               <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
                 {" "}
-                <h2 className="text-3xl font-extrabold mb-6 text-[#d8d29b] ">
+                <h2 className="text-3xl font-extrabold mb-6 text-white ">
                   Privacy Policy
                 </h2>{" "}
                 <div className="space-y-4 text-sm text-white leading-relaxed">
@@ -289,7 +289,7 @@ const App = () => {
                     AI systems, which requires us to handle data with the utmost
                     security and privacy standards globally available.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     1. Information We Collect
                   </h3>{" "}
                   <p>
@@ -298,7 +298,7 @@ const App = () => {
                     your dashboard interactions. High-frequency conversation
                     logs processed by our voice agents are heavily encrypted.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     2. How We Use Information
                   </h3>{" "}
                   <p>
@@ -308,7 +308,7 @@ const App = () => {
                     sensitive customer PII transacted through our conversational
                     nodes.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     3. Data Security
                   </h3>{" "}
                   <p>
@@ -323,7 +323,7 @@ const App = () => {
             {modalMode === "terms" && (
               <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
                 {" "}
-                <h2 className="text-3xl font-extrabold mb-6 text-[#d8d29b] ">
+                <h2 className="text-3xl font-extrabold mb-6 text-white ">
                   Terms of Service
                 </h2>{" "}
                 <div className="space-y-4 text-sm text-white leading-relaxed">
@@ -336,7 +336,7 @@ const App = () => {
                     Observice Automations Co. architecture, you agree to these
                     enterprise terms.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     1. Use of Autonomous Agents
                   </h3>{" "}
                   <p>
@@ -346,7 +346,7 @@ const App = () => {
                     structural framework but does not mandate the content of
                     output responses.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     2. SLA and Uptime
                   </h3>{" "}
                   <p>
@@ -355,7 +355,7 @@ const App = () => {
                     built-in failover logic automatically reroutes queries to
                     secondary models.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     3. Intellectual Property
                   </h3>{" "}
                   <p>
@@ -370,7 +370,7 @@ const App = () => {
             {modalMode === "cookie" && (
               <div className="animate-fade-in transition-all max-h-[60vh] overflow-y-auto pr-4 scrollbar-hide">
                 {" "}
-                <h2 className="text-3xl font-extrabold mb-6 text-[#d8d29b] ">
+                <h2 className="text-3xl font-extrabold mb-6 text-white ">
                   Cookie Policy
                 </h2>{" "}
                 <div className="space-y-4 text-sm text-white leading-relaxed">
@@ -383,14 +383,14 @@ const App = () => {
                     storage mechanisms and cookies to ensure seamless identity
                     management across your multi-app enterprise dashboard.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     1. Authentication Cookies
                   </h3>{" "}
                   <p>
                     Required to maintain your secure JWT session tokens while
                     you rapidly switch between Agent Configs and API Logs.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     2. Performance Telemetry
                   </h3>{" "}
                   <p>
@@ -398,7 +398,7 @@ const App = () => {
                     optimize the DOM load speeds, ensuring our dashboards react
                     instantly.
                   </p>{" "}
-                  <h3 className="text-lg text-[#d8d29b] font-bold mt-6 mb-2">
+                  <h3 className="text-lg text-white font-bold mt-6 mb-2">
                     3. Managing Permissions
                   </h3>{" "}
                   <p>
@@ -421,19 +421,19 @@ const App = () => {
               <div className="flex justify-center items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
                 {" "}
                 <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-300 h-6">
-                  <span className="text-[#142A7C] font-extrabold text-[11px] tracking-tighter">
+                  <span className="text-white tracking-widest font-extrabold text-[11px] tracking-tighter">
                     VISA
                   </span>
                 </div>{" "}
-                <div className="bg-[#1A1F36] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-600 h-6">
-                  <span className="text-[#635BFF] font-bold text-[11px]">
+                <div className="bg-[#1978e5]/20 px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-600 h-6">
+                  <span className="text-[#def525] tracking-widest font-bold text-[11px]">
                     stripe
                   </span>
                 </div>{" "}
                 <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-300 h-6">
                   <div className="flex">
-                    <div className="w-3 h-3 rounded-full bg-red-500/90 mix-blend-multiply relative left-1 z-10"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/90 mix-blend-multiply relative right-1"></div>
+                    <div className="w-3 h-3 rounded-full bg-red-500/90 opacity-10 relative left-1 z-10"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/90 opacity-10 relative right-1"></div>
                   </div>
                 </div>{" "}
                 <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-700 h-6">
@@ -489,7 +489,7 @@ const App = () => {
             </svg>{" "}
             <div className="flex flex-col ml-3 hidden sm:flex">
               {" "}
-              <span className="text-xl md:text-2xl font-black tracking-widest text-[#d8d29b] uppercase font-sans leading-none">
+              <span className="text-xl md:text-2xl font-black tracking-widest text-white uppercase font-sans leading-none">
                 Observice Automations{" "}
                 <span className="text-[#92b844] ">Co.</span>
               </span>{" "}
@@ -540,7 +540,7 @@ const App = () => {
                   setModalMode("login");
                   setIsModalOpen(true);
                 }}
-                className="text-white font-bold text-sm tracking-wide hover:text-[#d8d29b] :text-[#60A5FA] transition-colors hidden sm:block"
+                className="text-white font-bold text-sm tracking-wide hover:text-white :text-[#60A5FA] transition-colors hidden sm:block"
               >
                 Login
               </button>
@@ -569,7 +569,7 @@ const App = () => {
             {" "}
             <div className="z-10 animate-hero">
               {" "}
-              <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-[#085f52]/20 text-blue-700 rounded-full border border-[#085f52]/30 ">
+              <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-[#0a2e45]/20 text-blue-700 rounded-full border border-[#085f52]/30 ">
                 {" "}
                 Enterprise AI Architectures{" "}
               </span>{" "}
@@ -668,7 +668,7 @@ const App = () => {
                   </div>{" "}
                   <div className="flex gap-3 flex-row-reverse ai-message delay-500">
                     {" "}
-                    <div className="w-8 h-8 rounded-full bg-[#085f52]/20 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-[#0a2e45]/20 flex items-center justify-center">
                       {" "}
                       <span className="material-symbols-outlined text-sm text-[#92b844] ">
                         smart_toy
@@ -703,7 +703,7 @@ const App = () => {
                       <p className="text-xs text-white uppercase tracking-widest font-bold mb-1">
                         Active Bots
                       </p>{" "}
-                      <p className="text-2xl font-black text-[#d8d29b]">
+                      <p className="text-2xl font-black text-white">
                         1,204
                       </p>{" "}
                     </div>{" "}
@@ -737,11 +737,11 @@ const App = () => {
                 <button
                   key={idx}
                   onClick={() => setActiveService(idx)}
-                  className={`text-left p-6 rounded-[24px] transition-all duration-300 flex items-center gap-4 group ${activeService === idx ? "bg-[#def525] text-[#0a2e45] shadow-xl scale-[1.02]" : "bg-[#0a2e45] border border-white/5 hover:border-[#085f52]/50 hover:bg-[#085f52]/5 :bg-blue-900/10"}`}
+                  className={`text-left p-6 rounded-[24px] transition-all duration-300 flex items-center gap-4 group ${activeService === idx ? "bg-[#def525] text-[#0a2e45] shadow-xl scale-[1.02]" : "bg-[#0a2e45] border border-white/5 hover:border-[#085f52]/50 hover:bg-[#0a2e45]/5 :bg-blue-900/10"}`}
                 >
                   {" "}
                   <div
-                    className={`min-w-12 h-12 rounded-xl flex items-center justify-center transition-colors shadow-inner ${activeService === idx ? "bg-[#0a2e45]/20" : "bg-[#085f52]/20 text-[#92b844] group-hover:bg-[#def525] group-hover:text-[#0a2e45]"}`}
+                    className={`min-w-12 h-12 rounded-xl flex items-center justify-center transition-colors shadow-inner ${activeService === idx ? "bg-[#0a2e45]/20" : "bg-[#0a2e45]/20 text-[#92b844] group-hover:bg-[#def525] group-hover:text-[#0a2e45]"}`}
                   >
                     {" "}
                     <span className="material-symbols-outlined">
@@ -751,7 +751,7 @@ const App = () => {
                   <div>
                     {" "}
                     <h3
-                      className={`font-bold text-lg mb-1 leading-tight ${activeService === idx ? "text-[#0a2e45]" : "text-[#d8d29b] "}`}
+                      className={`font-bold text-lg mb-1 leading-tight ${activeService === idx ? "text-[#0a2e45]" : "text-white "}`}
                     >
                       {svc.title}
                     </h3>{" "}
@@ -830,7 +830,7 @@ const App = () => {
               {" "}
               <div className="relative reveal-on-scroll">
                 {" "}
-                <div className="text-[120px] font-extrabold text-[#92b844] /10 absolute -top-16 -left-4 select-none mix-blend-multiply ">
+                <div className="text-[120px] font-extrabold text-[#92b844] /10 absolute -top-16 -left-4 select-none opacity-10 ">
                   01
                 </div>{" "}
                 <div className="relative z-10 bg-[#0a2e45]/5 backdrop-blur-sm p-6 rounded-2xl border border-white/5 hover:border-[#085f52]/40 transition-colors shadow-sm">
@@ -849,7 +849,7 @@ const App = () => {
               </div>{" "}
               <div className="relative reveal-on-scroll delay-200">
                 {" "}
-                <div className="text-[120px] font-extrabold text-[#92b844] /10 absolute -top-16 -left-4 select-none mix-blend-multiply ">
+                <div className="text-[120px] font-extrabold text-[#92b844] /10 absolute -top-16 -left-4 select-none opacity-10 ">
                   02
                 </div>{" "}
                 <div className="relative z-10 bg-[#0a2e45]/5 backdrop-blur-sm p-6 rounded-2xl border border-white/5 hover:border-[#085f52]/40 transition-colors shadow-sm">
@@ -868,7 +868,7 @@ const App = () => {
               </div>{" "}
               <div className="relative reveal-on-scroll delay-400">
                 {" "}
-                <div className="text-[120px] font-extrabold text-[#92b844] /10 absolute -top-16 -left-4 select-none mix-blend-multiply ">
+                <div className="text-[120px] font-extrabold text-[#92b844] /10 absolute -top-16 -left-4 select-none opacity-10 ">
                   03
                 </div>{" "}
                 <div className="relative z-10 bg-[#0a2e45]/5 backdrop-blur-sm p-6 rounded-2xl border border-white/5 hover:border-[#085f52]/40 transition-colors shadow-sm">
@@ -968,7 +968,7 @@ const App = () => {
           </div>{" "}
           <div className="flex flex-col items-center justify-center gap-4">
             {" "}
-            <span className="text-[10px] text-[#d8d29b]/70 font-extrabold uppercase tracking-[0.2em] flex items-center gap-1.5">
+            <span className="text-[10px] text-white/80 font-extrabold uppercase tracking-[0.2em] flex items-center gap-1.5">
               {" "}
               <span className="material-symbols-outlined text-[14px] text-green-500">
                 encrypted
@@ -977,26 +977,24 @@ const App = () => {
             </span>{" "}
             <div className="flex gap-3 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 items-center justify-center bg-gray-200/50 px-6 py-3 rounded-2xl border border-white/5 ">
               {" "}
-              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-gray-100 text-[#142A7C] font-extrabold text-[12px] tracking-tighter">
+              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-gray-100 text-white tracking-widest font-extrabold text-[12px] tracking-tighter">
                 VISA
               </span>{" "}
               <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-gray-100 flex items-center justify-center">
                 <div className="flex">
-                  <div className="w-3.5 h-3.5 rounded-full bg-[#EA001B] mix-blend-multiply relative left-1.5 z-10"></div>
-                  <div className="w-3.5 h-3.5 rounded-full bg-[#F79E1B] mix-blend-multiply relative right-1"></div>
+                  <div className="w-3.5 h-3.5 rounded-full bg-[#EA001B] opacity-10 relative left-1.5 z-10"></div>
+                  <div className="w-3.5 h-3.5 rounded-full bg-[#F79E1B] opacity-10 relative right-1"></div>
                 </div>
               </span>{" "}
-              <span className="bg-[#1A1F36] border border-gray-600 px-3 py-1.5 rounded shadow-sm text-[#635BFF] font-bold text-[12px]">
+              <span className="bg-[#1978e5]/20 border border-gray-600 px-3 py-1.5 rounded shadow-sm text-[#def525] tracking-widest font-bold text-[12px]">
                 stripe
               </span>{" "}
-              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-white/5 text-black font-extrabold text-[12px]">
+              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-white/5 text-white font-extrabold text-[12px]">
                 {" "}
                 Pay
               </span>{" "}
-              <span className="bg-[#003087] px-3 py-1.5 rounded shadow-sm border border-[#003087] flex items-center">
-                <span className="text-[#009cde] font-bold text-[11px]">
-                  Pay
-                </span>
+              <span className="bg-white/10 px-3 py-1.5 rounded shadow-sm border border-[#003087] flex items-center">
+                <span className="text-white font-bold text-[11px]">Pay</span>
                 <span className="text-[#0a2e45] font-bold text-[11px]">
                   Pal
                 </span>
@@ -1006,7 +1004,7 @@ const App = () => {
           {/* International Legal Compliance */}{" "}
           <div className="w-full max-w-5xl border-t border-white/5 pt-8">
             {" "}
-            <h4 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-[#d8d29b]/70 mb-6">
+            <h4 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-white/80 mb-6">
               International E-Commerce & AI Legal Compliance
             </h4>{" "}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
@@ -1016,7 +1014,7 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   EU GDPR
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   General Data Protection Regulation 2016/679
                 </p>{" "}
               </div>{" "}
@@ -1025,7 +1023,7 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   PSD2 / SCA
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   Strong Customer Authentication for Payments
                 </p>{" "}
               </div>{" "}
@@ -1034,7 +1032,7 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   EU Consumer Rights
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   Directive 2011/83 — 14-Day Withdrawal
                 </p>{" "}
               </div>{" "}
@@ -1043,7 +1041,7 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   DSA / DMA
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   Digital Services & Digital Markets Act
                 </p>{" "}
               </div>{" "}
@@ -1052,7 +1050,7 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   ePrivacy
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   Cookie Consent & Electronic Communications
                 </p>{" "}
               </div>{" "}
@@ -1061,7 +1059,7 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   AML / KYC
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   Anti-Money Laundering Directive 6 (AMLD6)
                 </p>{" "}
               </div>{" "}
@@ -1070,7 +1068,7 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   EU AI Act
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   Artificial Intelligence Regulation 2024/1689
                 </p>{" "}
               </div>{" "}
@@ -1079,13 +1077,13 @@ const App = () => {
                 <p className="text-[#92b844] font-bold text-[10px] uppercase tracking-widest mb-1">
                   KVKK (TR)
                 </p>{" "}
-                <p className="text-[#d8d29b]/70 text-[9px]">
+                <p className="text-white/80 text-[9px]">
                   Kişisel Verilerin Korunması Kanunu No. 6698
                 </p>{" "}
               </div>{" "}
             </div>{" "}
           </div>{" "}
-          <div className="text-xs font-inter text-[#d8d29b]/70 text-center font-medium mt-4">
+          <div className="text-xs font-inter text-white/80 text-center font-medium mt-4">
             {" "}
             © 2026 Observice Automations Co. All rights reserved. Architected
             for Tomorrow.{" "}
