@@ -110,7 +110,7 @@ const App = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="work@company.com"
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl mb-4 focus:ring-2 focus:ring-[#085f52] outline-none text-white transition-colors"
+                  className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-[#0a2e45] border border-white/5 shadow-2xl mb-4 focus:ring-2 focus:ring-[#085f52] outline-none text-white transition-colors"
                 />{" "}
                 <button
                   disabled={isSubmitting}
@@ -166,14 +166,14 @@ const App = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Work Email"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                   <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Password"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                 </div>{" "}
                 <button
@@ -227,14 +227,14 @@ const App = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Work Email"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                   <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Create Password"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-300 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-[#0a2e45] border border-white/5 shadow-2xl text-white outline-none focus:ring-2 focus:ring-[#085f52] transition-colors"
                   />{" "}
                 </div>{" "}
                 <button
@@ -420,23 +420,23 @@ const App = () => {
               </div>{" "}
               <div className="flex justify-center items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
                 {" "}
-                <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-300 h-6">
+                <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-white/10 h-6">
                   <span className="text-white tracking-widest font-extrabold text-[11px] tracking-tighter">
                     VISA
                   </span>
                 </div>{" "}
-                <div className="bg-[#1978e5]/20 px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-600 h-6">
+                <div className="bg-[#1978e5]/20 px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-[#92b844]/30 h-6">
                   <span className="text-[#def525] tracking-widest font-bold text-[11px]">
                     stripe
                   </span>
                 </div>{" "}
-                <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-300 h-6">
+                <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-white/10 h-6">
                   <div className="flex">
                     <div className="w-3 h-3 rounded-full bg-red-500/90 opacity-10 relative left-1 z-10"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500/90 opacity-10 relative right-1"></div>
                   </div>
                 </div>{" "}
-                <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-gray-700 h-6">
+                <div className="bg-[#0a2e45] px-2 py-0.5 rounded shadow-sm flex items-center justify-center border border-white/10 h-6">
                   <span className="text-[#0a2e45] font-bold text-[11px]">
                      Pay
                   </span>
@@ -794,7 +794,7 @@ const App = () => {
                 <h3 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#0a2e45]">
                   {services[activeService].title}
                 </h3>{" "}
-                <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed font-medium">
+                <p className="text-white text-lg md:text-xl max-w-2xl mb-8 leading-relaxed font-medium">
                   {services[activeService].desc}
                 </p>{" "}
                 <div className="flex flex-wrap gap-3">
@@ -975,18 +975,18 @@ const App = () => {
               </span>{" "}
               Global Secure Configurations{" "}
             </span>{" "}
-            <div className="flex gap-3 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 items-center justify-center bg-gray-200/50 px-6 py-3 rounded-2xl border border-white/5 ">
+            <div className="flex gap-3 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 items-center justify-center bg-black/30 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/5 ">
               {" "}
-              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-gray-100 text-white tracking-widest font-extrabold text-[12px] tracking-tighter">
+              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-white/10 text-white tracking-widest font-extrabold text-[12px] tracking-tighter">
                 VISA
               </span>{" "}
-              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-gray-100 flex items-center justify-center">
+              <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-white/10 flex items-center justify-center">
                 <div className="flex">
                   <div className="w-3.5 h-3.5 rounded-full bg-[#EA001B] opacity-10 relative left-1.5 z-10"></div>
                   <div className="w-3.5 h-3.5 rounded-full bg-[#F79E1B] opacity-10 relative right-1"></div>
                 </div>
               </span>{" "}
-              <span className="bg-[#1978e5]/20 border border-gray-600 px-3 py-1.5 rounded shadow-sm text-[#def525] tracking-widest font-bold text-[12px]">
+              <span className="bg-[#1978e5]/20 border border-[#92b844]/30 px-3 py-1.5 rounded shadow-sm text-[#def525] tracking-widest font-bold text-[12px]">
                 stripe
               </span>{" "}
               <span className="bg-[#0a2e45] px-3 py-1.5 rounded shadow-sm border border-white/5 text-white font-extrabold text-[12px]">
