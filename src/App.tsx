@@ -580,7 +580,7 @@ const App = () => {
                 </span>{" "}
                 Departments{" "}
               </h1>{" "}
-              <p className="text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+              <p className="text-xl text-white/90 font-medium mb-10 max-w-xl leading-relaxed">
                 {" "}
                 Stop losing leads after 5 PM. We build hyper-realistic Voice
                 Agents, 24/7 WhatsApp Receptionists, and fully automated SaaS
@@ -723,7 +723,7 @@ const App = () => {
             <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">
               Our Core AI Services
             </h2>{" "}
-            <p className="text-on-surface-variant max-w-2xl text-lg">
+            <p className="text-white/90 font-medium max-w-2xl text-lg">
               Select an implementation module below to view how Observice
               Automations Co. structures deterministic AI pipelines specifically
               for your sector.
@@ -841,7 +841,7 @@ const App = () => {
                     </span>{" "}
                     Discovery
                   </h3>{" "}
-                  <p className="text-on-surface-variant leading-relaxed">
+                  <p className="text-white/90 font-medium leading-relaxed">
                     We audit your current tech stack to identify bottlenecks and
                     untapped automation potential within your ecosystem.
                   </p>{" "}
@@ -860,7 +860,7 @@ const App = () => {
                     </span>{" "}
                     Architecture
                   </h3>{" "}
-                  <p className="text-on-surface-variant leading-relaxed">
+                  <p className="text-white/90 font-medium leading-relaxed">
                     Our engineers design a bespoke automation roadmap tailored
                     to your specific operational requirements and KPIs.
                   </p>{" "}
@@ -879,7 +879,7 @@ const App = () => {
                     </span>{" "}
                     Implementation
                   </h3>{" "}
-                  <p className="text-on-surface-variant leading-relaxed">
+                  <p className="text-white/90 font-medium leading-relaxed">
                     Seamless integration of AI nodes with 24/7 monitoring and
                     iterative optimization protocols for maximum ROI.
                   </p>{" "}
