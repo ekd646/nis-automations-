@@ -802,7 +802,7 @@ const App = () => {
                   {services[activeService].tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-5 py-2 font-mono text-xs bg-[#0a2e45]/10 backdrop-blur-md rounded-xl text-[#0a2e45] font-bold tracking-widest uppercase border border-white/5 hover:bg-[#def525] hover:border-[#085f52] transition-colors"
+                      className="px-5 py-2 font-mono text-xs bg-[#0a2e45]/60 backdrop-blur-md rounded-xl text-[#def525] drop-shadow-sm font-bold tracking-widest uppercase border border-[#def525]/30 hover:bg-[#def525] hover:text-[#0a2e45] transition-colors"
                     >
                       {tag}
                     </span>
