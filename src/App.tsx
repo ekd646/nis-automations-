@@ -453,20 +453,21 @@ const App = () => {
           <a
             onClick={(e) => scrollToSection("hero", e)}
             href="#hero"
-            className="flex items-center gap-4 z-50 select-none cursor-pointer group"
+            className="flex items-center gap-3 z-50 select-none cursor-pointer group"
           >
-            <div className="relative flex items-center justify-center w-8 h-8">
-              {/* Extremely minimal "naive" and flat geometric shape - like Palantir/OpenAI */}
-              <div className="absolute inset-0 bg-[#085f52] opacity-20 rotate-45 transform group-hover:rotate-90 transition-all duration-700 ease-in-out"></div>
-              <div className="absolute inset-1 border-[1.5px] border-[#085f52] rounded-sm bg-transparent"></div>
-              <div className="w-2.5 h-2.5 bg-[#def525] rounded-[1px] absolute group-hover:scale-125 transition-transform duration-500"></div>
+            <div className="flex items-center justify-center">
+              <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:rotate-90 transition-transform duration-700 ease-in-out">
+                {/* Vercel/Stripe style ultra-minimalist geometry */}
+                <path d="M50 10 L90 50 L50 90 L10 50 Z" stroke="#def525" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="50" cy="50" r="12" fill="#085f52" />
+              </svg>
             </div>
             <div className="flex flex-col justify-center hidden sm:flex">
-              <span className="text-lg md:text-xl font-bold tracking-widest text-white uppercase font-sans leading-none mb-[2px]">
-                OBSERVICE<span className="text-[#085f52]">.</span>
+              <span className="text-xl md:text-[22px] font-bold tracking-widest text-white uppercase font-sans leading-none mb-[3px]">
+                OBSERVICE<span className="text-[#def525]">.</span>
               </span>
-              <span className="text-[8px] md:text-[9px] font-mono font-medium tracking-[0.45em] text-[#def525]/90 uppercase leading-none">
-                Enterprise Infrastructure
+              <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.3em] text-white/50 uppercase leading-none">
+                Enterprise AI Architectures
               </span>
             </div>
           </a>{" "}
