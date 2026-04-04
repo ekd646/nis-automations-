@@ -456,15 +456,17 @@ const App = () => {
             className="flex items-center gap-3 z-50 select-none cursor-pointer group"
           >
             <div className="flex items-center justify-center">
-              <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:rotate-90 transition-transform duration-700 ease-in-out">
-                {/* Vercel/Stripe style ultra-minimalist geometry */}
-                <path d="M50 10 L90 50 L50 90 L10 50 Z" stroke="#def525" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="50" cy="50" r="12" fill="#085f52" />
+              <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:scale-105 transition-transform duration-500 ease-out">
+                {/* Abstract Automation/Observation Loop (Nodes + Eye/Infinity shape) */}
+                <path d="M20 50 C20 30, 40 20, 50 20 C60 20, 80 30, 80 50 C80 70, 60 80, 50 80 C40 80, 20 70, 20 50 Z" stroke="#085f52" strokeWidth="8" strokeLinecap="round" opacity="0.4" />
+                <path d="M25 50 C25 25, 75 25, 75 50" stroke="#def525" strokeWidth="6" strokeLinecap="round" className="origin-center animate-[spin_4s_linear_infinite]" />
+                <circle cx="50" cy="50" r="10" fill="#def525" />
+                <circle cx="50" cy="50" r="4" fill="#0a2e45" />
               </svg>
             </div>
             <div className="flex flex-col justify-center hidden sm:flex">
               <span className="text-xl md:text-[22px] font-bold tracking-widest text-white uppercase font-sans leading-none mb-[3px]">
-                OBSERVICE<span className="text-[#def525]">.</span>
+                OBSERVICE<span className="text-[#def525]">.CO</span>
               </span>
               <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.3em] text-white/50 uppercase leading-none">
                 Enterprise AI Architectures
