@@ -453,50 +453,22 @@ const App = () => {
           <a
             onClick={(e) => scrollToSection("hero", e)}
             href="#hero"
-            className="flex items-center gap-2 group cursor-pointer"
+            className="flex items-center gap-4 z-50 select-none cursor-pointer group"
           >
-            {" "}
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="transform group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(8,95,82,0.4)]"
-            >
-              {" "}
-              <defs>
-                {" "}
-                <linearGradient id="autoCore" x1="0" y1="0" x2="100" y2="100">
-                  {" "}
-                  <stop offset="0%" stopColor="#60A5FA" />{" "}
-                  <stop offset="100%" stopColor="#085f52" />{" "}
-                </linearGradient>{" "}
-              </defs>{" "}
-              <path
-                d="M50 5 L10 28 L10 72 L50 95 L90 72 L90 28 Z"
-                fill="url(#autoCore)"
-                opacity="0.15"
-              />{" "}
-              <path
-                d="M50 15 L18 33 L18 67 L50 85 L82 67 L82 33 Z"
-                fill="url(#autoCore)"
-              />{" "}
-              <path d="M50 50 L18 33 L50 15 Z" fill="#ffffff" opacity="0.3" />{" "}
-              <path d="M50 50 L82 33 L82 67 Z" fill="#000000" opacity="0.2" />{" "}
-              <circle cx="50" cy="50" r="12" fill="#ffffff" className="" />{" "}
-              <circle cx="50" cy="50" r="4" fill="#085f52" className="" />{" "}
-            </svg>{" "}
-            <div className="flex flex-col ml-3 hidden sm:flex">
-              {" "}
-              <span className="text-xl md:text-2xl font-black tracking-widest text-white uppercase font-sans leading-none">
-                Observice Automations{" "}
-                <span className="text-[#92b844] ">Co.</span>
-              </span>{" "}
-              <span className="text-[9px] font-bold tracking-[0.4em] text-[#92b844] uppercase leading-none mt-1">
-                Enterprise Architecture
-              </span>{" "}
-            </div>{" "}
+            <div className="relative flex items-center justify-center w-8 h-8">
+              {/* Extremely minimal "naive" and flat geometric shape - like Palantir/OpenAI */}
+              <div className="absolute inset-0 bg-[#085f52] opacity-20 rotate-45 transform group-hover:rotate-90 transition-all duration-700 ease-in-out"></div>
+              <div className="absolute inset-1 border-[1.5px] border-[#085f52] rounded-sm bg-transparent"></div>
+              <div className="w-2.5 h-2.5 bg-[#def525] rounded-[1px] absolute group-hover:scale-125 transition-transform duration-500"></div>
+            </div>
+            <div className="flex flex-col justify-center hidden sm:flex">
+              <span className="text-lg md:text-xl font-bold tracking-widest text-white uppercase font-sans leading-none mb-[2px]">
+                OBSERVICE<span className="text-[#085f52]">.</span>
+              </span>
+              <span className="text-[8px] md:text-[9px] font-mono font-medium tracking-[0.45em] text-[#def525]/90 uppercase leading-none">
+                Enterprise Infrastructure
+              </span>
+            </div>
           </a>{" "}
           <div className="hidden md:flex items-center gap-8 ml-auto mr-12">
             {" "}
