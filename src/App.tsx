@@ -498,8 +498,8 @@ const App = () => {
               </svg>
             </div>
             <div className="flex flex-col justify-center">
-              <span className="text-xl md:text-[22px] font-bold tracking-widest text-white uppercase font-sans leading-none mb-[3px]">
-                OBSERVICE<span className="text-[#def525]">.CO</span>
+              <span className="text-[17px] sm:text-xl md:text-[22px] font-bold tracking-tight sm:tracking-widest text-white uppercase font-sans leading-none mb-[2px] sm:mb-[3px] truncate">
+                OBSER<span className="text-[#def525]">VICE</span>
               </span>
               <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.3em] text-white/50 uppercase leading-none hidden sm:block">
                 Enterprise AI Architectures
@@ -530,7 +530,7 @@ const App = () => {
               Clients
             </a>{" "}
           </div>{" "}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             {" "}
             {user ? (
               <button
@@ -558,7 +558,7 @@ const App = () => {
                 setModalMode("strategy");
                 setIsModalOpen(true);
               }}
-              className="bg-[#def525] text-[#0a2e45] px-6 py-2.5 rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-[#0a2e45] transition-colors active:scale-95 duration-150 shadow-lg shadow-[#def525]/10"
+              className="bg-[#def525] text-[#0a2e45] px-4 sm:px-6 py-2 sm:py-2.5 rounded-md sm:rounded-lg font-bold uppercase tracking-[0.1em] sm:tracking-widest text-[10px] sm:text-xs hover:bg-[#0a2e45] transition-colors active:scale-95 duration-150 shadow-lg shadow-[#def525]/10 whitespace-nowrap"
             >
               {" "}
               Get Started{" "}
