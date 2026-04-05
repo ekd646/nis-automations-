@@ -207,7 +207,7 @@ const App = () => {
                     setEmail("");
                     setPassword("");
                   }}
-                  className="w-full py-3.5 bg-[#0a2e45] font-semibold tracking-wide text-[#0a2e45] font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:opacity-80 transition-opacity mb-6 disabled:opacity-50"
+                  className="w-full py-3.5 bg-[#def525] text-[#0a2e45] font-extrabold uppercase tracking-widest rounded-xl shadow-lg hover:bg-white transition-colors mb-6 disabled:opacity-50"
                 >
                   {" "}
                   {isSubmitting ? "Verifying..." : "Sign In"}{" "}
