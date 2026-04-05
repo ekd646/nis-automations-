@@ -10,6 +10,12 @@ const App = () => {
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [user, setUser] = useState<any>(null);
+  const [toast, setToast] = useState<{ msg: string; ok: boolean } | null>(null);
+
+  const showToast = (msg: string, ok = true) => {
+    setToast({ msg, ok });
+    setTimeout(() => setToast(null), 4000);
+  };
   const services = [
     {
       title: "Inbound Voice AI Agents",
@@ -81,6 +87,17 @@ const App = () => {
   return (
     <div className="bg-[#0a2e45] text-white font-body antialiased min-h-screen relative">
       {" "}
+      {/* In-Theme Toast */}
+      {toast && (
+        <div className={`fixed top-6 left-1/2 -translate-x-1/2 z-[999] flex items-center gap-3 px-5 py-3.5 rounded-xl shadow-xl border text-sm font-bold tracking-wider transition-all ${
+          toast.ok
+            ? "bg-[#0a2e45] border-[#def525]/40 text-white"
+            : "bg-[#0a2e45] border-red-400/40 text-red-400"
+        }`}>
+          <span className={toast.ok ? "text-[#def525]" : "text-red-400"}>{toast.ok ? "✓" : "✕"}</span>
+          {toast.msg}
+        </div>
+      )}
       {isModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a2e45]/60 backdrop-blur-sm p-4 transition-opacity duration-300">
           {" "}
@@ -121,15 +138,11 @@ const App = () => {
                       .insert([{ email, source: "Strategy Call Modal" }]);
                     setIsSubmitting(false);
                     if (error) {
-                      alert(
-                        "Connection Error. Please check your network and try again.",
-                      );
+                      showToast("Something went wrong. Please try again.", false);
                       console.error(error);
                       return;
                     }
-                    alert(
-                      "Request received successfully! We will be in touch shortly.",
-                    );
+                    showToast("Request received! We'll respond via email within 24 hours.");
                     setEmail("");
                     setIsModalOpen(false);
                   }}
@@ -186,7 +199,7 @@ const App = () => {
                       });
                     setIsSubmitting(false);
                     if (error) {
-                      alert(error.message);
+                      showToast(error.message, false);
                       return;
                     }
                     setUser(data.user);
@@ -247,12 +260,10 @@ const App = () => {
                     });
                     setIsSubmitting(false);
                     if (error) {
-                      alert(error.message);
+                      showToast(error.message, false);
                       return;
                     }
-                    alert(
-                      "Success! Check your email for the confirmation link.",
-                    );
+                    showToast("Account created! Check your email for the confirmation link.");
                     setModalMode("login");
                     setPassword("");
                   }}
