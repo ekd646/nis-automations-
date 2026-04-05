@@ -501,7 +501,7 @@ const App = () => {
               <span className="text-[17px] sm:text-xl md:text-[22px] font-bold tracking-tight sm:tracking-widest text-white uppercase font-sans leading-none mb-[2px] sm:mb-[3px] truncate">
                 OBSER<span className="text-[#def525]">VICE</span>
               </span>
-              <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.3em] text-white/50 uppercase leading-none hidden sm:block">
+              <span className="text-[6.5px] sm:text-[9px] md:text-[10px] font-[800] tracking-[0.2em] sm:tracking-[0.3em] text-[#def525]/90 sm:text-white/50 uppercase leading-none mt-[2px] w-full text-left pr-1 sm:pr-0">
                 Enterprise AI Architectures
               </span>
             </div>
