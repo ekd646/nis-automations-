@@ -459,7 +459,7 @@ const App = () => {
               <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:scale-105 transition-transform duration-500 ease-out">
                 {/* Abstract Automation/Observation Loop (Nodes + Eye/Infinity shape) */}
                 <path d="M20 50 C20 30, 40 20, 50 20 C60 20, 80 30, 80 50 C80 70, 60 80, 50 80 C40 80, 20 70, 20 50 Z" stroke="#085f52" strokeWidth="8" strokeLinecap="round" opacity="0.4" />
-                <path d="M25 50 C25 25, 75 25, 75 50" stroke="#def525" strokeWidth="6" strokeLinecap="round" className="origin-center animate-[spin_4s_linear_infinite]" />
+                <path d="M25 50 C25 25, 75 25, 75 50" stroke="#def525" strokeWidth="6" strokeLinecap="round" className="origin-center transform transition-transform duration-700 group-hover:rotate-180" />
                 <circle cx="50" cy="50" r="10" fill="#def525" />
                 <circle cx="50" cy="50" r="4" fill="#0a2e45" />
               </svg>
