@@ -497,11 +497,11 @@ const App = () => {
                 <circle cx="50" cy="50" r="4" fill="#0a2e45" />
               </svg>
             </div>
-            <div className="flex flex-col justify-center hidden sm:flex">
+            <div className="flex flex-col justify-center">
               <span className="text-xl md:text-[22px] font-bold tracking-widest text-white uppercase font-sans leading-none mb-[3px]">
                 OBSERVICE<span className="text-[#def525]">.CO</span>
               </span>
-              <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.3em] text-white/50 uppercase leading-none">
+              <span className="text-[9px] md:text-[10px] font-semibold tracking-[0.3em] text-white/50 uppercase leading-none hidden sm:block">
                 Enterprise AI Architectures
               </span>
             </div>
