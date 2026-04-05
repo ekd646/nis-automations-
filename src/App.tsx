@@ -138,7 +138,7 @@ const App = () => {
                       .insert([{ email, source: "Strategy Call Modal" }]);
                     setIsSubmitting(false);
                     if (error) {
-                      showToast("Something went wrong. Please try again.", false);
+                      showToast(`Error: ${error.message}`, false);
                       console.error(error);
                       return;
                     }
