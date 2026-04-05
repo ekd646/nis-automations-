@@ -99,11 +99,10 @@ const App = () => {
               <div className="animate-fade-in transition-all">
                 {" "}
                 <h2 className="text-3xl font-extrabold mb-2 text-white text-center tracking-tight">
-                  Let's Build Your AI
+                  Request a Proposal
                 </h2>{" "}
                 <p className="text-white mb-8 text-sm leading-relaxed text-center">
-                  Drop your work email below. Our automation architects will
-                  reach out within 2 hours to map your workflows.
+                  Drop your work email below. Our team will respond with a tailored proposal within 24 hours.
                 </p>{" "}
                 <input
                   type="email"
@@ -137,10 +136,10 @@ const App = () => {
                   className="w-full bg-[#def525] text-[#0a2e45] py-3.5 rounded-xl font-bold hover:bg-[#0a2e45] transition-colors shadow-lg shadow-[#def525]/10 hover:scale-[1.02] disabled:opacity-50"
                 >
                   {" "}
-                  {isSubmitting ? "Routing..." : "Request Strategy Call"}{" "}
+                  {isSubmitting ? "Sending..." : "Send Enquiry"}{" "}
                 </button>{" "}
                 <p className="text-center text-xs text-white mt-6 pt-4 border-t border-white/5 ">
-                  Need dashboard access?{" "}
+                  Already have an account?{" "}
                   <span
                     onClick={() => setModalMode("login")}
                     className="text-[#92b844] font-bold cursor-pointer hover:underline"
