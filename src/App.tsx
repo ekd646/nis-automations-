@@ -3,7 +3,7 @@ import { supabase } from "./lib/supabaseClient";
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState<
-    "strategy" | "login" | "signup" | "privacy" | "terms" | "cookie"
+    "strategy" | "login" | "signup" | "privacy" | "terms" | "cookie" | "corporate"
   >("strategy");
   const [activeService, setActiveService] = useState(0);
   const [email, setEmail] = useState("");
@@ -409,6 +409,29 @@ const App = () => {
                 </div>{" "}
               </div>
             )}{" "}
+            {modalMode === "corporate" && (
+              <div className="animate-fade-in transition-all overflow-y-auto pr-4 scrollbar-hide">
+                <div className="flex justify-center text-left w-full mx-auto">
+                  <div className="flex flex-col w-full text-white/90 font-mono space-y-4 text-xs opacity-90 tracking-widest leading-relaxed border-l-4 border-[#92b844] bg-[#0a2e45]/50 backdrop-blur-sm p-6 rounded-r-lg">
+                    <div className="border-b border-[#92b844]/20 pb-3 mb-1">
+                      <span className="text-[#92b844] font-black tracking-[0.2em] uppercase text-[10px]">LEGAL ENTITY & OWNERSHIP</span>
+                      <h3 className="text-2xl font-bold font-sans text-white mt-1 uppercase tracking-[0.3em]">NISDE LTD</h3>
+                      <p className="text-[10px] text-[#def525] font-sans tracking-widest mt-1 uppercase">Company Number: 14781423</p>
+                    </div>
+                    <div>
+                      <span className="text-white/40 uppercase tracking-[0.15em] text-[10px] font-bold block mb-1">REGISTERED OFFICE</span>
+                       <span className="font-sans">71-75 Shelton Street<br/>
+                       Covent Garden, London<br/>
+                       WC2H 9JQ, United Kingdom</span>
+                    </div>
+                    <div className="pt-2">
+                       <span className="text-white/40 uppercase tracking-[0.15em] text-[10px] font-bold block mb-1">MANAGING DIRECTOR</span>
+                       <span className="font-sans font-black tracking-widest text-[#def525]">MUSTAFA DENiZ AVCI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
             <div className="mt-4 pt-4 text-center">
               {" "}
               <div className="flex items-center justify-center gap-1.5 text-xs text-white mb-3 font-medium">
@@ -1062,6 +1085,9 @@ const App = () => {
             {" "}
             © 2026 Observice Automations Co. All rights reserved. Architected
             for Tomorrow.{" "}
+            <div className="mt-6 flex justify-center">
+              <button onClick={() => { setModalMode("corporate"); setIsModalOpen(true); }} className="hover:text-white text-white/50 transition-colors uppercase tracking-widest text-[9px] font-bold border border-white/10 bg-[#085f52]/20 px-3 py-1.5 rounded">A NISDE LTD Company</button>
+            </div>
           </div>{" "}
         </div>{" "}
       </footer>{" "}
